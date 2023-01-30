@@ -1,10 +1,10 @@
 import monkey_app_img_light from '../assests/projectImages/monkey_app_img_light.png';
 import monkey_app_img_dark from '../assests/projectImages/monkey_app_img_dark.png';
-import portfolio_img_light from '../assests/projectImages/portfolio_img_light.png';
-import portfolio_img_dark from '../assests/projectImages/portfolio_img_dark.png';
-import engineer_news_img_light from '../assests/projectImages/engineer_news_img_light.png';
-import engineer_news_img_dark from '../assests/projectImages/engineer_news_img_dark.png';
-import monkey_weather_img_light from '../assests/projectImages/monkey_weather_img_light.png';
+import portfolio_img_light from '../assests/projectImages/portfolio_img_light.jpg';
+import portfolio_img_dark from '../assests/projectImages/portfolio_img_dark.jpg';
+import engineer_news_img_light from '../assests/projectImages/engineer_news_img_light.jpg';
+import engineer_news_img_dark from '../assests/projectImages/engineer_news_img_dark.jpg';
+import monkey_weather_img_light from '../assests/projectImages/monkey_weather_img_light.jpg';
 const projectsData = [
     {
         projectName:"Monkey App",
