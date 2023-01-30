@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+code {
+  font-family: 'Poppins', sans-serif;
+}
+/* header */
+.header_animate{
+  transition: all 0.3s ease-in-out 0s;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+/* .mySwiper{
+  background-color: red;
+} */
+.swiper-slide {
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+}
+.mail_icon{
+  --animate-duration: 5s;
+}
+#contact_menu{
+  
+  --animate-duration: 5s;
+}
+#header{
+  /* background-color: white; */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+}
+.blur_effect{
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+}
+@-webkit-keyframes MOVE-BG {
+  from {
+      background-position: 0% 0%
+  }
+  to { 
+      background-position: 187% 0%
+  }
+}
+#bg_container{
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.swiper-pagination-bullet{
+  background-color: gray !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: #805AD5!important;
+}
