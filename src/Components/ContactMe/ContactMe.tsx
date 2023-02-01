@@ -5,8 +5,10 @@ import {
     InputLeftElement, InputGroup,
     Textarea, SimpleGrid,
     GridItem, Box,
-    Text, Button
+    Text, Button,
+    Spinner
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FaLocationArrow } from 'react-icons/fa';
@@ -17,24 +19,25 @@ import { CustomToast } from "../Toast/CustomToast";
 import purple_bg from '../assests/purple_bg.svg';
 export default function ContactMe() {
     const { addToast } = CustomToast();
+    const [spinner, setSpinner] = useState(false);
     //  
-    const formValidate = (e: React.FormEvent<HTMLFormElement>):boolean=>{
+    const formValidate = (e: React.FormEvent<HTMLFormElement>): boolean => {
         const formData = new FormData(e.currentTarget);
         const formObject = Object.fromEntries(formData.entries());
         let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         let name = String(formObject.fullname);
         let message = String(formObject.message);
         let email = String(formObject.email);
-        if(name.trim() === ""){
-            addToast({title:"Name is required", message:"Please enter a name", status:"error"});
+        if (name.trim() === "") {
+            addToast({ title: "Name is required", message: "Please enter a name", status: "error" });
             return false;
         }
-        if(message.trim() === ''){
-            addToast({title:"Message is required", message:"Message must not be empty", status:"error"});
+        if (message.trim() === '') {
+            addToast({ title: "Message is required", message: "Message must not be empty", status: "error" });
             return false
         }
-        if(!email.match(validRegex)){
-            addToast({title:"Invalid Email", message:"Enter a valid email address", status:"error"});
+        if (!email.match(validRegex)) {
+            addToast({ title: "Invalid Email", message: "Enter a valid email address", status: "error" });
             return false;
         }
         return true;
@@ -42,21 +45,26 @@ export default function ContactMe() {
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
-        if(!formValidate(e)) return;
-       
-        emailjs.sendForm('service_portfolio', 'template_rr2ve1e', e.currentTarget, '2L3iGLFweDHBxyW0w')
+        if (!formValidate(e)) return;
+        setSpinner(true);
+        const templateName = process.env.REACT_APP_TEMPLATE_NAME ? process.env.REACT_APP_TEMPLATE_NAME : "";
+        const templateId = process.env.REACT_APP_TEMPLATE_ID ? process.env.REACT_APP_TEMPLATE_ID : "";
+        const password = process.env.REACT_APP_PASSWORD ? process.env.REACT_APP_PASSWORD : "";
+        emailjs.sendForm(templateName, templateId, e.currentTarget, password)
             .then(() => {
                 addToast({title:"Mail Sent", message:"Will reach you soon :)", status:"success"});
+                setSpinner(false);
+                e.currentTarget.reset();
             }, () => {
                 addToast({title:"Mail Sent Failed :(", message:"Server Error", status:"error"});
+                setSpinner(false);
             });
-        e.currentTarget.reset();
     }
     return (
-        <Container minWidth='100%' py={5} 
-        borderRadius={6}
-        className="blur_effect"
-        my={5}
+        <Container minWidth='100%' py={5}
+            borderRadius={6}
+            className="blur_effect"
+            my={5}
         >
             <SimpleGrid
                 columns={3}
@@ -71,7 +79,7 @@ export default function ContactMe() {
                         display={'flex'}
                         justifyContent={'center'}
                         alignItems={'center'}
-                        backgroundImage = {purple_bg}
+                        backgroundImage={purple_bg}
                         backgroundSize={'cover'}
                         py={5}
                     >
@@ -99,7 +107,7 @@ export default function ContactMe() {
                             <FormLabel fontWeight={'bold'}>Phone</FormLabel>
                             <InputGroup >
                                 <InputLeftElement children={<BsFillTelephoneFill />} />
-                                <Input  type="text" name="phone" placeholder="123-456-7890"  variant='flushed'></Input>
+                                <Input type="text" name="phone" placeholder="123-456-7890" variant='flushed'></Input>
                             </InputGroup>
                         </FormControl>
                         <FormControl mb={4} isRequired>
@@ -107,8 +115,8 @@ export default function ContactMe() {
                             <Textarea placeholder='type...' name='message' size='md'></Textarea>
                         </FormControl>
                         <VStack width={'100%'}>
-                            <Button  alignSelf={'flex-end'} rightIcon={<FaLocationArrow />} colorScheme='purple' size='lg' type="submit">
-                                Submit
+                            <Button alignSelf={'flex-end'} rightIcon={spinner?<Spinner />:<FaLocationArrow/>} colorScheme='purple' size='lg' type="submit">
+                                {spinner?"Sending":"Submit"}
                             </Button>
                         </VStack>
                     </form>
