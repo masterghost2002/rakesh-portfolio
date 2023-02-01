@@ -30,7 +30,7 @@ const projectsData = [
             },
             {
                 buttonName:'Api Docs',
-                linkUrl: 'https://github.com/masterghost2002/Monkey-Blog'
+                linkUrl: 'https://monkeyblogbackend-production.up.railway.app/api-docs/'
             },
             {
                 buttonName:'Source Code',
