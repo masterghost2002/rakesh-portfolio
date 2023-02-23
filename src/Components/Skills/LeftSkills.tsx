@@ -1,9 +1,10 @@
 
-import { Flex, IconButton, Tooltip } from '@chakra-ui/react';
+import { Flex, IconButton, Tooltip,  } from '@chakra-ui/react';
 import { FaGithub, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiMongodb, SiTypescript } from 'react-icons/si';
 import { DiJavascript, DiMysql, DiHtml5, DiJava } from 'react-icons/di';
 export default function LeftSkills() {
+ 
     return (
         <>
             <Flex justifyContent={'space-between'}  gap={['5', '5']} flexWrap='wrap' >
@@ -31,7 +32,7 @@ export default function LeftSkills() {
                 </Tooltip>
                 <Tooltip hasArrow label='Git' bg='gray.300' color='black'>
                     <IconButton
-                    aria-label = "ff"
+                        aria-label = "ff"
                         borderRadius='full'
                         width={['50px', '60px']}
                         height={['50px', '60px']}
