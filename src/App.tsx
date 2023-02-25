@@ -13,7 +13,7 @@ function App() {
       offset:200,
       duration: 900,
       easing: 'ease-in-out-quart'
-    });
+    }, []);
   })
   return (
     <>
