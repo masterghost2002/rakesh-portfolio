@@ -35,4 +35,3 @@ export default function Header() {
         </Box>
     )
 }
-// LND,coRkTyt6_Mj@E3fiX3WVsqof

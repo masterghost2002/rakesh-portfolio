@@ -1,7 +1,16 @@
 import LearnCodeOnline from '../../assets/LearnCodeOnline.jpeg';
 import GFG from '../../assets/GFG.jpeg';
-import HackerRank from '../../assets/HackerRank.jpeg'
+import HackerRank from '../../assets/HackerRank.jpeg';
+import ExternsClub from '../../assets/ExternsClub.jpeg';
 const CertificateData = [
+    {
+        certificateName:'Amazon Web Services',
+        organisation:'Externs Pvt Ltd',
+        organisationLogo:ExternsClub,
+        issuedData:'Mar 2023',
+        credentialLink:'https://certificate.givemycertificate.com/c/f6778d4d-a660-43d8-9ec9-25521aa565dc',
+        skills:['AWS', 'EC2', 'S3', 'EFS', 'EBS', 'Cloud Watch', 'Auto Scaling', 'VPC', 'Subnetting']
+    },
     {
         certificateName:'Pro Backend',
         organisation:'LearnCodeOnline.in',
