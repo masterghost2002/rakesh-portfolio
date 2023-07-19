@@ -15,7 +15,7 @@ export default function CodingProfile() {
       <LeetcodeStatsPanel />
       <Box>
         <Heading variant={'title'} >
-          Coding Profiles
+          Profile Links
         </Heading>
         <CustomIconLinks linksData={CodingProfileLinks}/>
       </Box>

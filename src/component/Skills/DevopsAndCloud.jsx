@@ -7,7 +7,7 @@ export default function DevopsAndCloud() {
         <WrapperBox>
             <Heading variant={'title'}>DevOps And Cloud</Heading>
             <SubSkillsContainer subHeading={'Cloud Services'} subSkills={Cloud} />
-            <SubSkillsContainer subHeading={'Cloud Services'} subSkills={DevTools} />
+            <SubSkillsContainer subHeading={'Tools'} subSkills={DevTools} />
         </WrapperBox>
     )
 }
