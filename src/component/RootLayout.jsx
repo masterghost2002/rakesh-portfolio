@@ -2,7 +2,6 @@ import React from 'react';
 import { chakra } from '@chakra-ui/react';
 import NavHeader from './NavHeader';
 import { Outlet } from 'react-router-dom';
-import SendMessageButton from './SendMessageButton';
 import FloatingContactModal from './FloatingContactModal';
 import Footer from './Footer';
 const Main = chakra('main', {
