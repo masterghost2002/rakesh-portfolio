@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 const IntitalStats = {
     totalQuestions: 0,
     totalSolved: 0,
