@@ -11,7 +11,6 @@ export default function WrapperContainer({ children }) {
             initial='hidden'
             animate='visible'
             transitionDuration={'.15s'}
-            py={'20px'}
             maxW={{ base: '100%', md: '80%' }}
             px={0}
             overflowY={'hidden'}

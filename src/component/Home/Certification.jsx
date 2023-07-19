@@ -1,6 +1,6 @@
-import { Box, Heading, List, ListItem } from "@chakra-ui/react";
+import {Heading, List, ListItem } from "@chakra-ui/react";
 import CertificationCard from "../Cards/CertificationCard";
-import CertificateData from "./CertificateData";
+import {CertificateData} from "./HomeData";
 import WrapperBox from "../WrapperBox";
 export default function Certification() {
     return (

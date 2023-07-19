@@ -10,7 +10,7 @@ const Logo = () => {
 };
 const Profession = () => {
     return (
-        <Box color={'purple.500'} fontWeight={500}>
+        <Box color={'purple.500'} fontWeight={500} >
             <Typewriter
                 options={{
                     strings: ['Software Engineer', 'Web Developer'],
@@ -25,7 +25,15 @@ const Profession = () => {
 }
 export default function Header() {
     return (
-        <WrapperBox display={'flex'} alignItems={'center'} justifyContent={'space-between'} borderRadius={'12px'} bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} px={{ base: '10px', md: '20px' }}>
+        <WrapperBox 
+            display={'flex'} 
+            alignItems={'center'} 
+            justifyContent={'space-between'} 
+            borderRadius={'12px'} 
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} 
+            px={{ base: '10px', md: '20px' }}
+            mt={2}
+        >
             <VStack width={'100%'} alignItems={'flex-start'} spacing={2}>
                 <Logo />
                 <Profession />

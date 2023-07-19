@@ -1,3 +1,5 @@
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import {BiLogoGmail} from 'react-icons/bi'
 import LearnCodeOnline from '../../assets/LearnCodeOnline.jpeg';
 import GFG from '../../assets/GFG.jpeg';
 import HackerRank from '../../assets/HackerRank.jpeg';
@@ -36,4 +38,22 @@ const CertificateData = [
         skills:['Problem Solving', 'Algorithm']
     }
 ]
-export default CertificateData;
+const SocialLinks = [
+    {
+        name:'Git Hub',
+        to:'https://github.com/masterghost2002',
+        icon:FaGithub
+    },
+    {
+        name:'Linked In',
+        to:'https://linkedin.com/in/rakeshdhariwal61',
+        icon:FaLinkedinIn
+    },
+    {
+        name:'Gmail',
+        to:'mailto: rakeshdhariwal61@gmail.com',
+        icon:BiLogoGmail
+    },
+
+]
+export  {CertificateData, SocialLinks};

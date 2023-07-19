@@ -1,6 +1,5 @@
-
+import {SiLeetcode, SiHackerrank, SiGeeksforgeeks} from 'react-icons/si';
 const coreSkills = ['Database Management', 'C/C++','JavaScript', 'Python Basic', 'Data Structure', 'Computer Networking', 'Operating System', 'Algorithms', 'Linux', 'Shell'];
-
 const FrontEndSkills = [
     'HTML',
     'CSS',
@@ -44,4 +43,21 @@ const DevTools = [
     'VM Ware',
     'Jenkins'
 ]
-export {coreSkills, FrontEndSkills, BackEndSkills, Cloud, DevTools};
+const CodingProfileLinks = [
+    {
+        name:'Leetcode',
+        to:'https://leetcode.com/rakeshdhariwal61',
+        icon:SiLeetcode
+    },
+    {
+        name:'Geek For Geeks',
+        to:'https://auth.geeksforgeeks.org/user/rakeshdhariwal61',
+        icon:SiGeeksforgeeks
+    },
+    {
+        name:'Hackerrank',
+        to:'https://hackerrank.com/rakeshdhariwal61',
+        icon:SiHackerrank
+    },
+]
+export {coreSkills, FrontEndSkills, BackEndSkills, Cloud, DevTools, CodingProfileLinks};
