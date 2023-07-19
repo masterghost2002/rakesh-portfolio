@@ -1,7 +1,7 @@
-import { Box, Heading, List, ListItem, ListIcon, Link, useColorModeValue } from "@chakra-ui/react";
-import { wrapperPadding } from "../../lib/theme";
+import {Heading, List, ListItem, ListIcon, Link, useColorModeValue } from "@chakra-ui/react";
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import {BiLogoGmail} from 'react-icons/bi'
+import WrapperBox from "../WrapperBox";
 const CustomListItemLink = ({name, to, icon}) => {
     return (
         <ListItem >
@@ -40,11 +40,11 @@ const ContactList = () => {
 }
 export default function Connect() {
     return (
-        <Box p={wrapperPadding}>
+        <WrapperBox>
             <Heading variant={'title'} >
                 Connect
             </Heading>
             <ContactList />
-        </Box>
+        </WrapperBox>
     )
 }

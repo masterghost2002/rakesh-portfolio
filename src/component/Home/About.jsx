@@ -1,7 +1,7 @@
 import Paragraph from '../Paragraph';
-import { Box, Heading, useColorModeValue, HStack, Link } from '@chakra-ui/react';
+import { Box, Heading, useColorModeValue, Link } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { wrapperPadding } from '../../lib/theme';
+import WrapperBox from '../WrapperBox';
 const CustomLink = ({ name, to }) => {
     return (
         <Link textDecoration={'underline'}
@@ -23,8 +23,8 @@ const CustomLink = ({ name, to }) => {
 }
 export default function About() {
     return (
-        <Box p={wrapperPadding} >
-            <Heading variant={'title'}>
+        <WrapperBox>
+             <Heading variant={'title'}>
                 About
             </Heading>
             <Paragraph className='animate__animated animate__fadeIn' fontWeight={500} color={useColorModeValue('blackAlpha.700', 'whiteAlpha.600')}>
@@ -36,6 +36,6 @@ export default function About() {
                 <CustomLink name={'Skills'} to={'Skills'}/>
                 <CustomLink name={'Projects'} to={'Projects'}/>
             </Box>
-        </Box>
+        </WrapperBox>
     )
 }

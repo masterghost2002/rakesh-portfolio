@@ -1,5 +1,5 @@
 import { Box, Heading, UnorderedList, ListItem, Text, useColorModeValue } from "@chakra-ui/react";
-import { wrapperPadding } from "../../lib/theme";
+import WrapperBox from "../WrapperBox";
 const CustomListItem = ({ date, institute, score, field }) => {
     return (
         <ListItem>
@@ -43,11 +43,11 @@ const EducationList = () => {
 }
 export default function Education() {
     return (
-        <Box p={wrapperPadding}>
+        <WrapperBox>
             <Heading variant={'title'} >
                 Education
             </Heading>
             <EducationList />
-        </Box>
+        </WrapperBox>
     )
 }

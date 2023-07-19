@@ -1,17 +1,16 @@
 import { Box,useColorModeValue, Spinner, Text, Divider, Center } from "@chakra-ui/react";
-import { wrapperPadding } from "../../lib/theme";
+import WrapperBox from '../WrapperBox';
 import useFetchLeetcodedata from "../../lib/useFetchLeetcodedata";
 export default function LeetcodeStatsPanel() {
     const stats = useFetchLeetcodedata();
     return (
-        <Box
+        <WrapperBox
             display={'flex'}
             justifyContent={'space-between'}
             flexDirection={'column'}
             borderRadius={'12px'}
             bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
             px={{ base: '10px', md: '20px' }}
-            p={wrapperPadding}
             marginY={2}
         >
             <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
@@ -35,6 +34,6 @@ export default function LeetcodeStatsPanel() {
                         </Box>
                     </Box>
             }
-        </Box>
+        </WrapperBox>
     )
 }

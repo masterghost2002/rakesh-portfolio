@@ -1,10 +1,10 @@
 import { Box, Heading, List, ListItem } from "@chakra-ui/react";
-import { wrapperPadding } from "../../lib/theme";
 import CertificationCard from "../Cards/CertificationCard";
 import CertificateData from "./CertificateData";
+import WrapperBox from "../WrapperBox";
 export default function Certification() {
     return (
-        <Box p={wrapperPadding}>
+        <WrapperBox>
             <Heading variant={'title'} >
                 Certification
             </Heading>
@@ -20,7 +20,6 @@ export default function Certification() {
                     )
                 }
             </List>
-
-        </Box>
+        </WrapperBox>
     )
 }
