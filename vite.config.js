@@ -9,14 +9,16 @@ const manifestForPlugIn = {
     short_name:"Rakesh Dhariwal",
     description:"Rakesh Dhariwal portfolio",
     icons:[{
-      src: '/androud-chrome-192x192.png',
+      src: '/android-chrome-192x192.png',
       sizes:'192x192',
-      type:'image/png'
+      type:'image/png',
+      purpose:'favicon'
     },
     {
       src:'/android-chrome-512x512.png',
       sizes:'512x512',
-      type:'image/png'
+      type:'image/png',
+      purpose:'favicon'
     },
     {
       src: '/apple-touch-icon.png',
@@ -26,14 +28,14 @@ const manifestForPlugIn = {
     },
     {
       src: '/maskable_icon.png',
-      sizes:'225x225',
+      sizes:'512x512',
       type:'image/png',
       purpose:'any maskable',
     }
   ],
   theme_color:'#171717',
   background_color:'#f0e7db',
-  display:"standlone",
+  display:"standalone",
   scope:'/',
   start_url:"/",
   orientation:'portrait'
