@@ -3,10 +3,10 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import Splash from './component/Splash';
 import RootLayout from './component/RootLayout';
 import RouteError from './Pages/RouteError';
+import 'animate.css';
 const Home = lazy(()=> import('./Pages/Home'));
 const Skills = lazy(()=> import('./Pages/Skills'));
 const Projects = lazy(()=>import('./Pages/Projects'));
-import 'animate.css';
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<RootLayout />} errorElement={<RouteError/>}>
     <Route index element={<Home/>}/>
