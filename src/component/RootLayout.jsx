@@ -17,7 +17,6 @@ export default function RootLayout() {
       <Main paddingX={{ base: '2%', md: '20%' }}>
           <Outlet />
       </Main>
-      {/* <SendMessageButton /> */}
       <FloatingContactModal/>
       <Footer />
     </>

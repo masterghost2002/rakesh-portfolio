@@ -37,7 +37,13 @@ export default function FloatingContactModal() {
     return (
         <>
             <Box position={'fixed'} bottom={'20px'} right={'20px'} onClick={onOpen} >
-                <Button aria-label="write-a-message-btn" leftIcon={<BiMessageSquareDetail />} colorScheme='purple' variant='solid' className="message-button">
+                <Button 
+                    aria-label="write-a-message-btn" 
+                    leftIcon={<BiMessageSquareDetail />} 
+                    colorScheme='purple' 
+                    variant='solid' 
+                    className="message-button"
+                >
                     <span id="btn-text" className="message-button-text" >
                         Write a message
                     </span>

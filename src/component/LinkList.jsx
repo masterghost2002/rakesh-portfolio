@@ -1,6 +1,6 @@
 import {List,ListItem, Link} from '@chakra-ui/react';
 import {BiLogoLinkedin, BiLogoGithub} from 'react-icons/bi';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
 const StyledListItemLink = ({value, to})=>{
     return (
     <ListItem>
@@ -10,6 +10,7 @@ const StyledListItemLink = ({value, to})=>{
             fontWeight={400}
             fontSize={'1.1em'}
             to={to}
+            _activeLink={{color:'purple.400'}}
         >
             {value}
         </Link>
