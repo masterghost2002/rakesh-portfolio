@@ -32,8 +32,9 @@ export default function LeetcodeStatsPanel() {
                             display={'flex'} 
                             flexDir={'column'}
                             justifyContent={'center'}
-                            overflow={'hidden'}
-                            translateY={-10}
+                            // overflow={'hidden'}
+                            id="box_3d"
+                            // border={'1px solid black'}
                         >
                             <Text opacity={.4}>
                                 {stats.totalSolved-1}

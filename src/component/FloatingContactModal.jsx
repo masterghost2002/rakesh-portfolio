@@ -16,7 +16,7 @@ import {
     InputLeftElement,
     FormControl,
     FormLabel,
-    Textarea
+    Textarea,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { FiMail } from 'react-icons/fi';
@@ -69,9 +69,7 @@ const ContactForm = () => {
             emailjs.sendForm(serviceId, templateId, e.currentTarget, password)
                 .then(() => {
                     addToast({ title: "Mail Sent", message: "Will reach you soon :)", status: "success" });
-                    e.currentTarget.reset();
                 }, (err) => {
-                    console.log(err)
                     addToast({ title: "Mail Sent Failed :(", message: "Server Error", status: "error" });
                 });
         }
@@ -137,7 +135,7 @@ export default function FloatingContactModal() {
                                 Don’t hesitate to reach out if you have any questions or just want to say hello!
                             </Text>
                         </Box>
-                        {<ContactForm />}
+                        {<ContactForm  />}
                     </ModalBody>
 
                     <ModalFooter>
@@ -146,7 +144,8 @@ export default function FloatingContactModal() {
                         </Button>
                         <Button onClick={() => {
                             document.getElementById('formsubmit-button').click();
-                        }} colorScheme="purple" rightIcon={<FaLocationArrow />} aria-label="form-submit-btn-activator">Send</Button>
+                        }} colorScheme="purple" rightIcon={<FaLocationArrow />} aria-label="form-submit-btn-activator"> Send
+                        </Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
