@@ -22,6 +22,7 @@ html {
 .message-button{
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
+  z-index: 1000;
 }
 .message-button .message-button-text{
   max-width: 0px;
@@ -36,6 +37,9 @@ html {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
  
+}
+.mySwiper{
+  z-index: 2;
 }
 @keyframes floating {
   0% { transform: translate(0,  0px); }

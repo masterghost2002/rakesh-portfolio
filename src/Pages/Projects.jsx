@@ -1,11 +1,12 @@
-import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
-
+import WrapperContainer from '../component/WrapperContainer'; 
+import Header from '../component/Projects/Header';
+import WebDevProjects from '../component/Projects/WebDevProjects';
 export default function Projects() {
   return (
-    <Box maxH={'100dvh'} display={'flex'} alignItems={'center'} flexDirection={'column'} justifyContent={'center'}>
-        Hey!, visitor I am updating my portfolio.
-        <Text>Project section is under upgrade. Kindly do, revisit after some time.</Text>
-    </Box>
+    <WrapperContainer>
+      <Header/>
+      <WebDevProjects/>
+    </WrapperContainer>
   )
 }
