@@ -32,7 +32,7 @@ export default function LeetcodeStatsPanel() {
                             display={'flex'} 
                             flexDir={'column'}
                             justifyContent={'center'}
-                            // overflow={'hidden'}
+                            overflow={'hidden'}
                             id="box_3d"
                             // border={'1px solid black'}
                         >

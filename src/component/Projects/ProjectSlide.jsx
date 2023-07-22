@@ -1,14 +1,13 @@
-import { Card, Image, CardBody, Heading, Text, CardFooter, Button } from "@chakra-ui/react";
-
-export default function ProjectSlide({ projectData, id, HandleViewFullDetails, isFullScreen }) {
+import { Card, Image, CardBody, Heading, Text, CardFooter, Box, useColorModeValue } from "@chakra-ui/react";
+import { Skills } from "../Cards/CertificationCard";
+export default function ProjectSlide({ projectData, id, isFullScreen }) {
     return (
         <Card
-            direction={{ base: 'column', sm: 'column' }}
-            overflow={!isFullScreen ? 'hidden' : 'auto'}
             variant='outline'
             border={'none'}
             id={id}
             backgroundColor={'inherit'}
+            p={0}
         >
             <Image
                 objectFit='cover'
@@ -18,14 +17,18 @@ export default function ProjectSlide({ projectData, id, HandleViewFullDetails, i
             />
 
             <CardBody
-                maxH={isFullScreen ? { base: 'auto' } : { base: '150', md: '120' }}
-                minH={isFullScreen?'100%':'auto'}
-                overflow={!isFullScreen && 'hidden'}
-                mb={2}
-
+                maxH={isFullScreen ? { base: 'auto' } : { base: '200', md: '120' }}
+                overflow={'hidden'}
+                pb={2}
             >
-                <Heading size='md' fontSize={{ base: '16px', md: '18px' }}>{projectData.projectName}</Heading>
-                <Text py='2' fontSize={'14px'}>
+                <Heading color={'green.500'} size='md' py={isFullScreen && 2} fontWeight={'600'}>{projectData.projectName}</Heading>
+                { isFullScreen && <Box display={'flex'} flexWrap={'wrap'} py={2} gap={2} justifyContent={'space-evenly'}>
+                    {
+                        projectData.techUsed.map((skill, index) => <Skills key={`${skill}+${index}`} name={skill} />)
+                    }
+                </Box>}
+
+                <Text py={isFullScreen && 5} fontWeight={500} color={useColorModeValue('blackAlpha.700', 'whiteAlpha.600')}>
                     {projectData.projectDescription}
                 </Text>
             </CardBody>
@@ -35,10 +38,6 @@ export default function ProjectSlide({ projectData, id, HandleViewFullDetails, i
                 justifyContent={'flex-end'}
 
             >
-                <Button
-                    onClick={HandleViewFullDetails}
-                    variant={'ghost'} >{!isFullScreen ? 'View Full Details' : 'Exit Full Screen'}
-                </Button>
             </CardFooter>
         </Card>
     )

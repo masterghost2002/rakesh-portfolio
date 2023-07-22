@@ -70,7 +70,7 @@ export default function WebDevProjects() {
     return (
         <WrapperBox>
             <Heading variant={'title'}>Web Deveopment</Heading>
-            <SwiperContainer isFullScreen={isFullScreen}>
+            <SwiperContainer isFullScreen={isFullScreen} HandleViewFullDetails={HandleViewFullDetails}>
                 {
                     WebDevProjectsData.map((project, index) => {
                         return (

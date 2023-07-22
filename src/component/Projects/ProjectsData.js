@@ -13,7 +13,7 @@ const WebDevProjectsData = [
         projectType: 'Major',
         projectImageLight: meow_chat_img_light,
         projectImageDark: meow_chat_img_light,
-        techUsed: 'Tech-used: MERN Stack, React Context, React-Router, Chakra UI, Node Mailer,Axios, web-socket, Cloudinary,JWT,Crypto JS,MJML',
+        techUsed: ['MERN Stack', 'React Context', 'React-Router', 'Chakra UI','Node Mailer','Axios', 'web-socket', 'Cloudinary','JWT','Crypto JS','MJML'],
         projectDescription: `The project is a fully responsive full stack chat app that uses web-sockets for
         Full-duplex communication between the users. It has the functionality to show
         last online time of user. OTP based signup is used with node mailerto send OTP
@@ -38,7 +38,7 @@ const WebDevProjectsData = [
         projectType: 'Major',
         projectImageLight: catkart_img_light,
         projectImageDark: catkart_img_light,
-        techUsed: 'React, Styled Component, Router Dom,ReCharts,Cloudinary,Redux-Toolkit,ReduxPersist,Axios,Cloudinary,Express,Mongoose,Razorpay,crypto-jsT',
+        techUsed: ['React', 'Styled Component', 'Router Dom','ReCharts','Cloudinary','Redux-Toolkit','ReduxPersist','Axios','Cloudinary','Express','Mongoose','Razorpay','crypto-js'],
         projectDescription: `The project is a fullstack e-commerce web-app which allows users to purchase
         products and pay using razorpay gateway. File upload is implemented using
         cloudinary to upload product and user profile images. MonkeyDashboard
@@ -62,7 +62,7 @@ const WebDevProjectsData = [
         projectType: 'Major',
         projectImageLight: monkey_app_img_light,
         projectImageDark: monkey_app_img_dark,
-        techUsed: 'MERN Stack, React Redux, React-Router, Chakra UI, Node Mailer, Axios, JODIT',
+        techUsed: ['MERN Stack', 'React Redux', 'React-Router', 'Chakra UI', 'Node Mailer', 'Axios', 'JODIT'],
         projectDescription: `Monkey-App (Blogging Site)\n
             Deployed a full stack blogging web-app release over 11+ versions of it.\n
             Write the logic of 4 digit email OTP verification which is done during password reset and Sign-Up.\n
@@ -90,7 +90,7 @@ const WebDevProjectsData = [
         projectType: 'Minor',
         projectImageLight: portfolio_img_light,
         projectImageDark: portfolio_img_dark,
-        techUsed: 'React,React-Router, Chakra UI,Email JS, Swiper JS',
+        techUsed: ['React','React-Router', 'Chakra UI','Email JS', 'Swiper JS'],
         projectDescription: `
             Created and deployed this beautiful portfolio app having simple and sleak design.
             Have light and dark mode.
@@ -113,7 +113,7 @@ const WebDevProjectsData = [
         projectType: 'Minor',
         projectImageLight: engineer_news_img_light,
         projectImageDark: engineer_news_img_dark,
-        techUsed: 'React, React-Infinite-Loader, News-Api, Top Loader, Bootstrap',
+        techUsed: ['React', 'React-Infinite-Loader', 'News-Api', 'Top Loader', 'Bootstrap'],
         projectDescription: `
             Created a react app which fetches the news using news api.
             Implemented a button to choose different catagory news.
@@ -133,7 +133,7 @@ const WebDevProjectsData = [
         projectType: 'Minor',
         projectImageLight: monkey_weather_img_light,
         projectImageDark: monkey_weather_img_light,
-        techUsed: 'React, AccuWeather-Api, Bootstrap',
+        techUsed: ['React', 'AccuWeather-Api', 'Bootstrap'],
         projectDescription: `
             Created a react app which shows the weather of request country/state.
             Implemented a search bar to search weather of different country/state.
