@@ -12,7 +12,7 @@ const CustomLink = ({ name, to }) => {
             textDecorationColor={'purple.400'}
             _hover={
                 {
-                    color:useColorModeValue('black', 'white')
+                    color: useColorModeValue('black', 'white')
                 }
             }
             to={to}
@@ -24,17 +24,18 @@ const CustomLink = ({ name, to }) => {
 export default function About() {
     return (
         <WrapperBox>
-             <Heading variant={'title'}>
+            <Heading variant={'title'}>
                 About
             </Heading>
             <Paragraph className='animate__animated animate__fadeIn' fontWeight={500} color={useColorModeValue('blackAlpha.700', 'whiteAlpha.600')}>
-                I am an undergraduate student in computer science at Gurugram University.
-                I have experience solving complex problems and working on many projects in full-stack development. Currently,
-                I am exploring the DevOps field and enhancing my skills.
+                I am currently a B.Tech undergraduate student in computer science at Gurugram University. 
+                Throughout my academic journey, 
+                I have gained significant experience in tackling complex problems and actively participated in various projects related to full-stack development. At present, 
+                I am deeply engrossed in exploring the vast domain of DevOps and actively working on enhancing my skills in this field.
             </Paragraph>
-            <Box marginTop={2} fontWeight={500} display={{base:'flex',md:'none'}} gap={2}>
-                <CustomLink name={'Skills'} to={'Skills'}/>
-                <CustomLink name={'Projects'} to={'Projects'}/>
+            <Box marginTop={2} fontWeight={500} display={{ base: 'flex', md: 'none' }} gap={2}>
+                <CustomLink name={'Skills'} to={'Skills'} />
+                <CustomLink name={'Projects'} to={'Projects'} />
             </Box>
         </WrapperBox>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { chakra, Text, useColorModeValue, Box , Link} from '@chakra-ui/react';
+import { chakra, useDisclosure, useColorModeValue, Box , Link} from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import ThemeToogler from './ThemeToogler';
 import LinkList from './LinkList';
@@ -26,6 +26,8 @@ const LogoLink = ()=>{
     )
 }
 export default function NavHeader() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const btnRef = React.useRef()
     return (
         <Header padding={{ base: '0% 2%', md: '0% 20%' }} bg={useColorModeValue('#ffffff40', '#20202380')}>
             <LogoLink/>
@@ -35,7 +37,14 @@ export default function NavHeader() {
             <Box display={'flex'} alignItems={'center'} gap={2}>
                 <ThemeToogler />
                 <Box display={{ md: 'none' }}>
-                    <SideNavigation children={<LinkList />} icon={<BiMenuAltRight />} />
+                    <SideNavigation 
+                        children={<LinkList onClose={onClose}/>} 
+                        icon={<BiMenuAltRight />}
+                        btnRef = {btnRef}
+                        isOpen={isOpen}
+                        onOpen = {onOpen}
+                        onClose = {onClose} 
+                    />
                 </Box>
             </Box>
         </Header>
