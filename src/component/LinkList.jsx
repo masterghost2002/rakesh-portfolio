@@ -3,7 +3,7 @@ import {BiLogoLinkedin, BiLogoGithub} from 'react-icons/bi';
 import { NavLink as RouterLink } from 'react-router-dom';
 const StyledListItemLink = ({value, to, onClose})=>{
     return (
-    <ListItem onClick={()=>onClose()}>
+    <ListItem onClick={()=>onClose() }>
         <Link
             as={RouterLink}
             _hover={{textDecoration:'none', fontWeight:'500'}}
