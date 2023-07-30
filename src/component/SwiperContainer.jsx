@@ -77,8 +77,8 @@ export default function App({ children, isFullScreen, HandleViewFullDetails }) {
       >
         {
           isFullScreen?
-          <IconButton onClick={HandleViewFullDetails} borderRadius={'50%'} aria-aria-label='exit-fullscreen-btn' icon={<AiOutlineClose/>} colorScheme='red'/>:
-          <Button aria-aria-label='fullscreen-btn' onClick={HandleViewFullDetails}>Read More</Button>
+          <IconButton onClick={HandleViewFullDetails} borderRadius={'50%'} aria-label='exit-fullscreen-btn' icon={<AiOutlineClose/>} colorScheme='red'/>:
+          <Button aria-label='fullscreen-btn' onClick={HandleViewFullDetails}>Read More</Button>
         }
       </Box>
     </Box>
