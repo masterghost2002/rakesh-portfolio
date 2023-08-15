@@ -38,7 +38,7 @@ export default function NavHeader() {
                 <ThemeToogler />
                 <Box display={{ md: 'none' }}>
                     <SideNavigation 
-                        children={<LinkList onClose={onClose}/>} 
+                        children={<LinkList />} 
                         icon={<BiMenuAltRight />}
                         btnRef = {btnRef}
                         isOpen={isOpen}
